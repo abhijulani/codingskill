@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DBMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" </head>
+
+
+    <div class="header">
+        <img src="logooo.jpg" width="100px" align="left">
+        <p>Welcome to CodingSkills.com</p>
+    </div>
+    <div class="hello">
+    <div class="navbar">
+        <a href="index.html"><b>Home</b></a>
+        <a href="dbms1.html"><b>DBMS</b></a>
+        <a href="program.html"><b>Program</b></a>
+        <a href="#"><b>Login</b></a>
+    </div>
+</div>
+
+<center><h1><div style="margin-top:20px;">Constraints</div></h1></center>
+<div style="margin:40px;">Constraints in SQL means we are applying certain conditions or restrictions on the database. This further means that before inserting data into the database, we are checking for some conditions. If the condition we have applied to the database holds true for the data which is to be inserted, then only the data will be inserted into the database tables.<br><br>
+<h4><b>Constraints available in SQL are:</b></h4>
+<ol>
+<li>NOT NULL</li>
+<li>UNIQUE</li>
+<li>PRIMARY KEY</li>
+<li>FOREIGN KEY</li>
+<li>CHECK</li>
+<li>DEFAULT</li>
+</ol>
+
+<h3>NOT NULL</h3>>NULL means empty, i.e., the value is not available.<br>Whenever a table's column is declared as NOT NULL, then the value for that column cannot be empty for any of the table's records.<br>There must exist a value in the column to which the NOT NULL constraint is applied.
+<br><br>
+<b>Syntax : </b>CREATE TABLE TableName (ColumnName1 datatype NOT NULL, ColumnName2 datatype,…., ColumnNameN datatype);<br>
+<br>
+<b>Input and Output :</b><br><img src="notnull.png"><br><br><br>
+
+
+<h3>UNIQUE</h3>Duplicate values are not allowed in the columns to which the UNIQUE constraint is applied.<br>The column with the unique constraint will always contain a unique value.<br>This constraint can be applied to one or more than one column of a table, which means more than one unique constraint can exist on a single table.
+<br><br>
+<b>Syntax : </b>CREATE TABLE TableName (ColumnName1 datatype UNIQUE, ColumnName2 datatype,…., ColumnNameN datatype);<br>
+<br>
+<b>Input and Output :</b><br><img src="unique.png"><br><br><br>
+
+
+<h3>PRIMARY KEY</h3>PRIMARY KEY Constraint is a combination of NOT NULL and Unique constraints.<br>NOT NULL constraint and a UNIQUE constraint together forms a PRIMARY constraint.<br>The column to which we have applied the primary constraint will always contain a unique value and will not allow null values.
+<br><br>
+<b>Syntax : </b>CREATE TABLE TableName (ColumnName1 datatype PRIMARY KEY, ColumnName2 datatype,…., ColumnNameN datatype);<br>
+<br>
+<b>Input and Output :</b><br><img src="pk.png"><br><br><br>
+
+
+<h3>FOREIGN KEY</h3>A foreign key is used for referential integrity.<br>When we have two tables, and one table takes reference from another table, i.e., the same column is present in both the tables and that column acts as a primary key in one table. That particular column will act as a foreign key in another table.
+<br><br>
+<b>Syntax : </b>CREATE TABLE tablename(ColumnName1 Datatype(SIZE) PRIMARY KEY, ColumnNameN Datatype(SIZE), FOREIGN KEY( ColumnName ) REFERENCES PARENT_TABLE_NAME(Primary_Key_ColumnName)); <br>
+<br>
+<b>Input and Output :</b><br><img src="fk.png"><br><br><br>
+
+
+<h3>CHECK</h3>Whenever a check constraint is applied to the table's column, and the user wants to insert the value in it, then the value will first be checked for certain conditions before inserting the value into that column.
+<br><br>
+<b>Syntax : </b>CREATE TABLE TableName (ColumnName1 datatype CHECK (ColumnName1 Condition), ColumnName2 datatype,…., ColumnNameN datatype);;<br>
+<br>
+<b>Input and Output :</b><br><img src="checkk.png"><br><br><br>
+
+<h3>DEFAULT</h3>Whenever a default constraint is applied to the table's column, and the user has not specified the value to be inserted in it, then the default value which was specified while applying the default constraint will be inserted into that particular column.
+<br><br>
+<b>Syntax : </b>CREATE TABLE TableName (ColumnName1 datatype DEFAULT Value, ColumnName2 datatype,…., ColumnNameN datatype);<br>
+<br>
+<b>Input and Output :</b><br><img src="dt.png"><br><br><br>
+
+
+
+
+
+
+
+
+
+</div>
+<footer class="footer">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="footer-col">
+                                            <h4>About Us</h4>
+                                            <ul>
+                                                <li>Abhimanyu Saharan</li>
+                                                <li>BCA-2</li>
+                                                <li>Roll No. - 7098/21</li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-col">
+                                            <h4>DBMS</h4>
+                                            <ul>
+                                                <li>DBMS stands for Database Management System</li>
+                                                <li>SQL stands for Structured Query Language</li>
+                                                <li>SQL is a database language</li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-col">
+                                            <h4>Follow Us</h4>
+                                            <div class="social-links">
+                                                <a href="https://m.facebook.com/abheesaharan/"><i
+                                                        class="fab fa-facebook-f"></i></a>
+                                                <a href="https://www.instagram.com/abheesaharan/"><i
+                                                        class="fab fa-instagram"></i></a>
+                                                <a
+                                                    href="https://www.linkedin.com/in/abhimanyu-saharan-461728220?originalSubdomain=in"><i
+                                                        class="fab fa-linkedin-in"></i></a>
+                                                <a href="https://twitter.com/abheesaharan/"><i
+                                                        class="fab fa-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+
+                            <!-- GetButton.io widget -->
+                            <script type="text/javascript">
+                                (function () {
+                                    var options = {
+                                        whatsapp: "+919728884322", // WhatsApp number
+                                        snapchat: "abheesaharan", // Snapchat username
+                                        call_to_action: "Message us", // Call to action
+                                        button_color: "#FF6550", // Color of button
+                                        position: "right", // Position may be 'right' or 'left'
+                                        order: "snapchat,whatsapp", // Order of buttons
+                                    };
+                                    var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+                                    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+                                    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+                                    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+                                })();
+                            </script>
+                            <!-- /GetButton.io widget -->
+
+</body>
+</html>
+
+
+
+
